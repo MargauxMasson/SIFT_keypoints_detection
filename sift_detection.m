@@ -11,6 +11,8 @@ I = single(rgb2gray(I)) ;
 length = size(f,2);
 % we take only the 200 last keypoints because
 % they are the highest response keypoints (highest scale)
+% From doc : "If frames are not passed in order of increasing scale, they are
+% re-orderded."
 last_200_points = length-200+1:length;
 highest_response_keypoints = f(:,last_200_points);
 
